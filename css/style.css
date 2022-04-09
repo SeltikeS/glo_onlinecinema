@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto-Regular.ttf");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Medium.ttf");
+  src: url("../fonts/Roboto-Medium.ttf");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Bold.ttf");
+  src: url("../fonts/Roboto-Bold.ttf");
   font-weight: 700;
   font-display: swap;
   font-style: bold;
@@ -199,7 +199,12 @@ input {
 }
 
 .main-display__trailer {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/spiderman.jpg');
+  background: linear-gradient(
+    0deg, 
+    rgba(0, 0, 0, 0.4), 
+    rgba(0, 0, 0, 0.4)
+    ), 
+    url('../img/spiderman.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -300,7 +305,7 @@ input {
 
 .trending__item {
   align-items: flex-end;
-  background: url('/img/trending.png');
+  background: url('../img/trending.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -318,7 +323,7 @@ input {
       rgba(0, 0, 0, 0.4), 
       rgba(0, 0, 0, 0.4)
     ), 
-    url('/img/trending.png');
+    url('../img/trending.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -326,7 +331,7 @@ input {
 
 .popular__item {
   align-items: flex-end;
-  background: url('/img/popular.png');
+  background: url('../img/popular.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -344,7 +349,7 @@ input {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ), 
-    url('/img/popular.png');
+    url('../img/popular.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
