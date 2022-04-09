@@ -1,3 +1,28 @@
+/* fonts */
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+  font-style: bold;
+}
+
 /* reset css */
 *,
 *::before,
@@ -67,9 +92,9 @@ input {
   display: grid;
   gap: 8rem 0;
   grid-template-areas: 
-  "my-header my-header"
-  "my-aside my-main"
-  "my-aside my-main";
+  "my-header my-header my-header"
+  "my-aside my-main my-main"
+  "my-aside my-main my-main";
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
 }
 
@@ -165,9 +190,305 @@ input {
 }
 
 .header__personal {
-  width: 6rem;
-  height: 6rem;
   border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+}
+
+.main {
+  width: 98.5%;
+}
+
+.main-display__trailer {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/spiderman.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  padding: 1.9rem;
+  position: relative;
+  height: 20.2rem;
+}
+
+.main-display__views {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+.main-display__header {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.main-display__date {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.button-play__wrap {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8.1rem;
+  width: 8.1rem;
+}
+
+.button-play {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0.1rem 0 0.5rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 0;
+}
+
+.title__left,
+.title__right {
+  align-items: center;
+  display: flex;
+}
+
+.title__main {
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+.title__count {
+  color: rgba(255, 255, 255, 0.2);  
+  font-size: 2rem;
+  line-height: 2.3rem;
+  margin-left: 2rem;
+}
+
+.title__right span {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.title__right img {
+  height: 0.9rem;
+  width: 1rem;
+  margin-left: 0.8rem;
+}
+
+.trending,
+.popular {
+  display: flex;
+  justify-content: space-between;
+}
+
+.trending__item {
+  align-items: flex-end;
+  background: url('/img/trending.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.6rem;
+  display: flex;
+  position: relative;
+  height: 25.1rem;
+  width: 47%;
+}
+
+.trending__item.subitem {
+  background: 
+    linear-gradient(
+      0deg, 
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ), 
+    url('/img/trending.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.popular__item {
+  align-items: flex-end;
+  background: url('/img/popular.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.6rem;
+  display: flex;
+  position: relative;
+  height: 19.2rem;
+  width: 31%;
+}
+
+.popular__item.subitem {
+  background: 
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ), 
+    url('/img/popular.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.trending__plash {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1.6rem);
+  border-radius: 1.6rem;
+  padding: 0.5rem 1.4rem;
+  position: absolute;
+  top: 1.9rem;
+  left: 1.9rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.trending__footer {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(1.6rem);
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.9rem;
+  position: relative;
+  height: 6.8rem;
+  width: 100%;
+}
+
+.popular__footer {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(1.6rem);
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.9rem;
+  position: relative;
+  height: 3.8rem;
+  width: 100%;
+}
+
+.trending__footer-left,
+.popular__footer-left {
+  display: flex;
+  position: relative;
+}
+
+.trending__footer__button {
+  position: relative;
+  margin-right: 1.5rem;
+  width: 3rem;
+}
+
+.popular__footer__button {
+  position: relative;
+  margin-right: 1rem;
+  width: 1.8rem;
+}
+
+.small {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1.6rem);
+  height: 3rem;
+  width: 3rem;
+}
+
+.small-popular {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1.6rem);
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.small .button-play {
+  height: 1.1rem;
+  width: 1.1rem;
+  padding: 0 0.1rem 0 0.25rem;
+}
+
+.small-popular .button-play {
+  height: 0.67rem;
+  width: 0.67rem;
+  padding: 0 0 0 0.14rem;
+}
+
+.trending__title,
+.popular__title {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.trending__header {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.popular__header {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.trending__date {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.popular__date {
+  font-weight: 700;
+  font-size: .8rem;
+  line-height: .9rem;
+}
+
+.trending__time {
+  background: #FFF;
+  border-radius: 1.6rem;
+  color: #000;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: 0.5rem 1.2rem;
+}
+
+.popular__rating {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.popular__rating img {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.4rem;
+}
+
+.img__opacity {
+  background: inherit, linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 /* сетка */ 
